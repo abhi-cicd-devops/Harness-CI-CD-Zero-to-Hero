@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_abhi_cicd_devops_Harness_CI_CD_Zero_to_Hero_1790750954158-pr-trigger-input-set
+  identifier: Build_abhi_cicd_devops_Harness_CI_CD_Zero_to_Hero_1790750954158prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: project1
+  pipeline:
+    identifier: Build_abhi_cicd_devops_Harness_CI_CD_Zero_to_Hero_1790750954158
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
