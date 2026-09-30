@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_abhi_cicd_devops_Harness_CI_CD_Zero_to_Hero_1790750954158
+  name: Build Harness-CI-CD-Zero-to-Hero
+  orgIdentifier: default
+  projectIdentifier: project1
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github
+        repoName: abhi-cicd-devops/Harness-CI-CD-Zero-to-Hero
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello world
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
